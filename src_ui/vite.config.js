@@ -11,4 +11,9 @@ export default defineConfig({
       '@': '/src_ui',
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['/src_ui/main.js'],
+    },
+  },
 });
