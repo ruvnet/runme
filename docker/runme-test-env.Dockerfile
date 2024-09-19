@@ -22,6 +22,12 @@ ENV DENO_INSTALL=$HOME/.deno
 RUN curl -fsSL https://deno.land/install.sh | sh \
     && cp $DENO_INSTALL/bin/deno /usr/local/bin/deno
 
+# Install ViteJS
+RUN npm install -g vite
+
+# Install Tailwind CSS
+RUN npm install -g tailwindcss
+
 # Configure workspace
 WORKDIR /workspace
 
